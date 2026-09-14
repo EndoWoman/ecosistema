@@ -47,7 +47,7 @@ export default function Home() {
   const title = section === "Dashboard" ? "Tu clínica, en una vista" : section;
   return <div className="shell">
     <aside className="sidebar">
-      <a className="brand" href="/" aria-label="Endo Woman, volver al dashboard"><Image src="/brand/endo-woman-original.png" alt="Endo Woman · Centro ginecológico" width={720} height={720} priority unoptimized/></a>
+      <a className="brand" href="/" aria-label="Endo Woman, volver al dashboard"><Image src="/brand/endo-woman-rosa.png" alt="Endo Woman · Centro ginecológico" width={720} height={720} priority unoptimized/></a>
       <nav aria-label="Navegación del CEO">{sections.map((s,i)=><button key={s} className={section===s ? "active" : ""} aria-current={section===s ? "page" : undefined} onClick={()=>setSection(s)}><Icon name={icons[i]}/>{s}</button>)}</nav>
       <div className="sidebar-bottom"><div className="role-caption">ECOSISTEMA ENDO WOMAN</div><div className="role-badge"><Icon name="shield" size={19}/> Dirección general</div><p>Portal del CEO</p></div>
     </aside>

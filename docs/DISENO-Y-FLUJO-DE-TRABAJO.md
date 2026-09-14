@@ -5,7 +5,7 @@
 - Pantallas exportadas de Google Stitch aportadas por la clínica.
 - Paleta del archivo DESIGN.md: vino #974258, rosa #F08AA1, rosa claro #FEC6D3 y fondo #F9F9F9.
 - Inter para textos, alojada localmente mediante @fontsource/inter. Los títulos usan Georgia/Times para conservar la apariencia con remates de las capturas. DESIGN.md propone Manrope, pero no corresponde a la apariencia de los títulos en las capturas; la coincidencia tipográfica exacta queda por confirmar.
-- Logo original PNG copiado sin alteración a public/brand/endo-woman-original.png. El encuadre se realiza con CSS sobre fondo vino porque el original tiene letras blancas y transparencia.
+- Logo rosa transparente proporcionado por la clínica, copiado sin alteración a public/brand/endo-woman-rosa.png. Sustituye en el dashboard a la versión blanca anterior. El encuadre se realiza con CSS sobre el fondo blanco de la barra lateral.
 
 ## Qué contiene esta entrega
 
