@@ -1,7 +1,5 @@
 # Módulos del ecosistema
 
-Cada módulo reunirá sus pantallas, reglas de negocio y acceso a datos.
+Orden acordado: cuentas y permisos primero; después persistencia operativa, equipo, servicios, pacientes, finanzas y marketing. Agenda, expediente, diario, comunidad y asistente se habilitarán posteriormente.
 
-Orden inicial: identidad y permisos, organización y equipo, pacientes, finanzas, marketing. Después: agenda, expediente, diario, comunidad y asistente.
-
-El catálogo en src/core/roles.ts solo enumera roles. Los permisos deberán verificarse en el servidor antes de habilitar datos reales. La interfaz actual no constituye un sistema de acceso seguro.
+La primera implementación de identidad reside en `src/core/auth`; sus pantallas están en `src/app/acceso`, `activar`, `cuentas` y `portal`. La autorización se verifica en el servidor. Ver `docs/CUENTAS-Y-PERMISOS.md` para alcance, uso y límites.

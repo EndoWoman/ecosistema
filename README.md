@@ -4,7 +4,9 @@ Base inicial del portal del CEO, construida con Next.js y TypeScript.
 
 ## Estado actual
 
-Prototipo local navegable con secciones de dirección, finanzas, marketing, equipo, pacientes y configuración. No tiene autenticación, base de datos ni registros reales. Las cifras de personal representan el alcance previsto, no cuentas creadas. Las gráficas financieras y de marketing usan datos ficticios identificados como demostración.
+Primera implementación local de cuentas y permisos: cuenta inicial CEO, inicio y cierre de sesión, roles verificados en servidor, activación, recuperación supervisada y desactivación. Los usuarios y sesiones se guardan en SQLite local, fuera de Git. No se crearon cuentas reales durante el desarrollo.
+
+El dashboard sigue mostrando cifras ficticias. Equipo, servicios, cobros, prospectos y datos clínicos aún no tienen módulos operativos. Guía: [Cuentas y permisos](docs/CUENTAS-Y-PERMISOS.md).
 
 Diseño y flujo de trabajo: docs/DISENO-Y-FLUJO-DE-TRABAJO.md.
 
@@ -17,13 +19,14 @@ npm ci
 npm run dev
 ```
 
-Abrir http://localhost:3000. Para detenerlo, pulsar Control+C en la terminal.
+Abrir http://127.0.0.1:3000. Para detenerlo, pulsar Control+C en la terminal.
 
 ## Verificar
 
 ```sh
-npm run typecheck
+npm test
 npm run build
+npm run test:http
 ```
 
 ## Estructura
@@ -33,4 +36,4 @@ npm run build
 - `src/modules`: organización futura de las funciones de negocio.
 - `docs/MAPA-FUNCIONAL-Y-MVP.md`: alcance aprobado.
 
-Próximo módulo: identidad, permisos en servidor y organización. Después se incorporarán registros financieros y comerciales. No almacenar información real de pacientes, contraseñas ni credenciales en Git. El despliegue público requiere implementar y validar los controles de acceso.
+Siguiente etapa: revisar el acceso con la persona CEO y definir la persistencia operativa para equipo, servicios, cobros y prospectos. No almacenar información de pacientes, contraseñas ni credenciales en Git. Esta entrega es local; no habilita operación clínica ni despliegue público.
