@@ -12,3 +12,6 @@ coverage/
 *.key
 private-data/
 backups/
+
+*.tsbuildinfo
+.vercel/
