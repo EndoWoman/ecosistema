@@ -4,7 +4,9 @@ Base inicial del portal del CEO, construida con Next.js y TypeScript.
 
 ## Estado actual
 
-Prototipo local navegable con secciones de dirección, finanzas, marketing, equipo, pacientes y configuración. No tiene autenticación, base de datos ni registros reales. Las cifras de personal representan el alcance previsto, no cuentas creadas.
+Prototipo local navegable con secciones de dirección, finanzas, marketing, equipo, pacientes y configuración. No tiene autenticación, base de datos ni registros reales. Las cifras de personal representan el alcance previsto, no cuentas creadas. Las gráficas financieras y de marketing usan datos ficticios identificados como demostración.
+
+Diseño y flujo de trabajo: docs/DISENO-Y-FLUJO-DE-TRABAJO.md.
 
 ## Iniciar en tu computadora
 
