@@ -1,0 +1,12 @@
+import { DatabaseSync } from 'node:sqlite';
+import { mkdirSync,chmodSync,existsSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { randomUUID } from 'node:crypto';
+const source=process.env.ENDOWOMAN_AUTH_DB||resolve('private-data/auth.sqlite');
+if(!existsSync(source))throw new Error('Primero inicia la aplicación para crear la base local.');
+mkdirSync('backups',{recursive:true,mode:0o700});
+const target=resolve('backups',`endo-${new Date().toISOString().replace(/[:.]/g,'-')}-${randomUUID().slice(0,8)}.sqlite`);
+const db=new DatabaseSync(source);db.prepare('VACUUM INTO ?').run(target);db.close();chmodSync(target,0o600);
+const backup=new DatabaseSync(target,{readOnly:true});const result=backup.prepare('PRAGMA integrity_check').get();backup.close();
+if(result.integrity_check!=='ok')throw new Error('El respaldo no pasó la comprobación de integridad.');
+console.log(`Respaldo local verificado: ${target}`);

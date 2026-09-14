@@ -7,9 +7,10 @@
     "build": "next build --webpack",
     "start": "next start --hostname 127.0.0.1",
     "typecheck": "tsc --noEmit",
-    "test": "node --experimental-strip-types --test tests/auth.test.mjs",
+    "test": "node --experimental-strip-types --test tests/auth.test.mjs tests/operations.test.mjs",
     "auth:recover": "node --experimental-strip-types scripts/recover-access.mjs",
-    "test:http": "node --experimental-strip-types --test tests/auth-http.test.mjs"
+    "test:http": "node --experimental-strip-types --test tests/auth-http.test.mjs",
+    "db:backup": "node scripts/backup.mjs"
   },
   "engines": {
     "node": ">=24 <25"

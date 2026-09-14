@@ -24,14 +24,14 @@ Los correos no se verifican automáticamente: Dirección debe comprobar la ident
 - Contraseñas de 12 a 128 caracteres, almacenadas con scrypt, sal aleatoria de 16 bytes y parámetros N=32768, r=8, p=1; nunca en texto plano.
 - Sesiones de 8 horas, con tokens aleatorios de 32 bytes. En la base solo queda el hash del token. Cookie HttpOnly y SameSite=Strict; Secure si el origen configurado usa HTTPS.
 - Acceso validado en servidor en las páginas privadas y en cada operación de administración. Ocultar botones no es el mecanismo de autorización.
-- Dirección puede ver el dashboard y administrar cuentas. Los demás perfiles solo acceden a su portal inicial. No hay permisos clínicos o financieros operativos todavía.
+- Dirección puede ver el dashboard y administrar cuentas. Los demás perfiles solo acceden a su portal inicial. Los permisos operativos adicionales se documentan en BASE-OPERATIVA.md; el acceso clínico sigue pendiente.
 - Activación, recuperación supervisada, desactivación, reactivación y cambios de rol. Cambiar rol o estado revoca sesiones y códigos anteriores.
 - Protección contra modificar la propia cuenta desde el directorio; debe conservarse una cuenta CEO activa.
 - Bloqueo de inicio tras 5 intentos por correo durante una ventana de 15 minutos; límite global adicional para el entorno local.
 - Validación de origen y host en peticiones que modifican estado.
 - Auditoría de creación, cambios, inicios/cierres de sesión y emisión/uso de códigos. La pantalla muestra los últimos 30 eventos.
 
-El dashboard conserva sus gráficas sintéticas y sus etiquetas de demostración. Contar cuentas no equivale todavía a contabilizar el equipo contratado.
+Actualización: el dashboard ahora usa los registros de la [base operativa](BASE-OPERATIVA.md), con permisos por módulo para Dirección, Administración y Marketing. Contar cuentas no equivale a contabilizar integrantes del equipo.
 
 ## Recuperación
 
